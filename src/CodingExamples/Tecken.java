@@ -1,4 +1,4 @@
-package JustQuestions;
+package CodingExamples;
 
 import java.util.Scanner;
 
