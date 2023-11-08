@@ -1,0 +1,36 @@
+
+Redogörelse av följande termer:
+
+    *Objekt:
+    Det betyder en instans/flera instanser av en klass.
+    Tex vi kan skapa många instanser av en klass "häst". Där varje
+    instans av hästen har olika attributer, tex olika färg på hästen och höjd.
+    Så av klassen har vi skapat många objekt(instanser) där varje instans har olika attribut.
+    Därför är objekten inte samma.
+
+    *Konstruktor:
+    I skapelse av objketen så kallar vi på konstruktor. De skapas
+    alltid en tom konstruktor om vi inte har skrivit en. Konstruktor används för
+    att initiera attribut och inparametrarna. Konstrutkorn har alltid samma namn som
+    klassen.
+
+
+    *Attribut:
+     Är något som beskriver hur en viss idé ser ut/
+     Eller vad för typ av information den innehåller.
+     Tex så har vi en klass Human, som har attribut som
+     name, gender och age.
+
+
+    *Redogörelse för grundläggande prinicper för versionshantering:
+    Att lösa problem så som ifall koden inte passar ihop ifall jag skrivit en viss version
+    och någon annan i projektet skrivit en annan version av koden.
+    Vi kommer använda GIT för att hantera historik i kod för att undvika merge konflikter.
+    Andra grundläggande principer är iden om att committa, pusha eller pull. Det vill säga om du ska kommentera
+    /uppdatera kod, skicka upp den till repository eller att man hämtar från repository.
+
+
+
+    *Beskriv kort utvecklingsprocessen TDD:
+    TDD står för Test Drive Development. Man skriver helt enkelt testet innan man ens påbörjat skriva koden!
+    Vilket är en utmaning eftersom man börjar skriva ett test för en kod som inte finns.
