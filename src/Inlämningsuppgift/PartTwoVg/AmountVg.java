@@ -7,9 +7,11 @@ public class AmountVg {
     private int amountChars = 0;
     private int amountRows = 0;
     private ArrayList<String> listWithWords = new ArrayList<>();
+
     public int getAmountChars(String input) {
         return amountChars += input.length();
     }
+
     public int getAmountRows() {
         return amountRows++;
     }
@@ -32,7 +34,7 @@ public class AmountVg {
     }
 
     // Metoden nedan tar input från användaren, och kontrollerar vad som skrivs.
-    public void displaying(){
+    public void displaying() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             String input = scanner.nextLine();
@@ -40,11 +42,9 @@ public class AmountVg {
                 break;
             } else if (input.equalsIgnoreCase("check")) {
                 info();
-            }
-            else if (input.equalsIgnoreCase("words")) {
+            } else if (input.equalsIgnoreCase("words")) {
                 list(listWithWords);
-            }
-            else {
+            } else {
                 System.out.println(input);
                 listWithWords.add(input);
                 getAmountChars(input);
@@ -67,6 +67,7 @@ public class AmountVg {
         }
         return longestWord;  // Return the found longest word
     }
+
     public void setListWithWords(ArrayList<String> listWithWords) {
         this.listWithWords = listWithWords;
     }
