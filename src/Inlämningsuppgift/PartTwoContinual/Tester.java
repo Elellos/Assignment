@@ -19,9 +19,8 @@ public class Tester {
 
         // Assert
         int expected = input.length();
-        int expectedTest = 8;
         assertEquals(expected, actual);
-        assertEquals(expectedTest, actual);
+
     }
 
     @Test
