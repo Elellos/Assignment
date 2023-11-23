@@ -36,9 +36,10 @@ public class AmountVg {
     public String getTheLongWord() {
         String longestWord = "";  // Initialize to an empty string
         for (String word : listWithWords) {
-            String noSpaceWord = word.replace(" ", "");
+            String[] noSpaceWord = word.split(" ");
+            String wordsNotSpaced = String.join("", noSpaceWord);
             if (word.length() > longestWord.length()) {
-                longestWord = noSpaceWord;
+                longestWord = wordsNotSpaced;
             }
         }
         return longestWord;  // Return the found longest word
