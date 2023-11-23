@@ -21,20 +21,6 @@ public class VgTester {
     }
 
     @Test
-    public void testAmountOfRowsAndIncrementPlusOne() {
-        //Arrange
-        AmountVg method = new AmountVg();
-
-        //Act
-        int actual = method.getAmountRows() + 1;
-        int expected = 0;
-        expected++;
-
-        //Actual
-        assertEquals(expected, actual);
-    }
-
-    @Test
     public void testTheLongestWordWritten() {
         // Arrange
         AmountVg method = new AmountVg();
@@ -45,7 +31,6 @@ public class VgTester {
 
         // Act
         method.setListWithWords(listWithItems);
-
         String longestWord = method.getTheLongWord();
 
         // Assert

@@ -21,7 +21,7 @@ public class AmountVg {
         System.out.println("Total amount written rows: " + getAmountRows());
     }
 
-    public void list(ArrayList<String> listWithWords) {
+    public void list() {
 
         //Enchanded for loop "For Each"
         //  for (String word : listWithWords) {
@@ -31,6 +31,21 @@ public class AmountVg {
             String word = listWithWords.get(i);
             System.out.print(word + " ");
         }
+    }
+
+    public String getTheLongWord() {
+        String longestWord = "";  // Initialize to an empty string
+        for (String word : listWithWords) {
+            String noSpaceWord = word.replace(" ", "");
+            if (word.length() > longestWord.length()) {
+                longestWord = noSpaceWord;
+            }
+        }
+        return longestWord;  // Return the found longest word
+    }
+
+    public void setListWithWords(ArrayList<String> listWithWords) {
+        this.listWithWords = listWithWords;
     }
 
     // Metoden nedan tar input från användaren, och kontrollerar vad som skrivs.
@@ -43,7 +58,7 @@ public class AmountVg {
             } else if (input.equalsIgnoreCase("check")) {
                 info();
             } else if (input.equalsIgnoreCase("words")) {
-                list(listWithWords);
+                list();
             } else {
                 System.out.println(input);
                 listWithWords.add(input);
@@ -51,24 +66,10 @@ public class AmountVg {
                 getAmountRows();
             }
         }
-        System.out.print("The following words/sentences have been typed: ");
-        list(listWithWords);
+        System.out.print("The following words have been typed: ");
+        list();
         System.out.println();
         info();
-        System.out.println("The Longest Word/Sentence: " + getTheLongWord());
-    }
-
-    public String getTheLongWord() {
-        String longestWord = "";  // Initialize to an empty string
-        for (String word : listWithWords) {
-            if (word.length() > longestWord.length()) {
-                longestWord = word;
-            }
-        }
-        return longestWord;  // Return the found longest word
-    }
-
-    public void setListWithWords(ArrayList<String> listWithWords) {
-        this.listWithWords = listWithWords;
+        System.out.println("The Longest Word: " + getTheLongWord());
     }
 }

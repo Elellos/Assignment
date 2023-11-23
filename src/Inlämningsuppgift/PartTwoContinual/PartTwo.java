@@ -7,6 +7,8 @@ public class PartTwo {
         Amount calc = new Amount();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type stop, to stop counting rows and chars.\nType check, to check how many rows and chars you have thus far.");
+
+        //Körs hela tiden tills input == stop, då avslutas programet.
         while (true) {
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("stop")) {
