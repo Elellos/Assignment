@@ -37,9 +37,12 @@ public class AmountVg {
         String longestWord = "";  // Initialize to an empty string
         for (String word : listWithWords) {
             String[] noSpaceWord = word.split(" ");
-            String wordsNotSpaced = String.join("", noSpaceWord);
-            if (word.length() > longestWord.length()) {
-                longestWord = wordsNotSpaced;
+            //Skapar en till forsats för att titta på varje ord i vår nya string array noSpaceWord
+            for (String wordsInNospace : noSpaceWord) {
+                // Om ordet i den temporära noSpaceWords arrayen är längre än längsta ordet, så ska längsta ordet bli ordet från arrayen
+                if (wordsInNospace.length() > longestWord.length()) {
+                    longestWord = wordsInNospace;
+                }
             }
         }
         return longestWord;  // Return the found longest word
